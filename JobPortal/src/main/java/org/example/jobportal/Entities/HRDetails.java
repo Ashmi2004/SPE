@@ -16,22 +16,23 @@ import java.util.List;
 @Entity
 @Table(name="HRDetails")
 public class HRDetails {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "hrId")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="hrId")
     private Integer hrId;
 
-    @Column(name="name")
-    private String name;
+    @Column(name="hrName",nullable = false, length = 200)
+    private String hrName;
 
-    @Column(name="org")
-    private String org;
+    @Column(name="orgName",nullable = false, length = 200)
+    private String orgName;
 
-    @Column(name="phone")
+    @Column(name="phone",nullable = false, length = 100)
     private String phone;
 
-    @Column(name = "address")
-    private String address;
+    @Column(name="email",nullable = false, length = 200)
+    private String email;
 
     @JsonIgnore
     @OneToOne(fetch = FetchType.LAZY)

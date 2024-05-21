@@ -21,22 +21,31 @@ public class ApplicantDetails {
     @Column(name="applicantId")
     private Integer applicantId;
 
-    @Column(name="name")
-    private String name;
+    @Column(name="fullName",nullable = false, length = 200)
+    private String fullName;
 
-    @Column(name="age")
+    @Column(name="age",nullable = false)
     private Integer age;
 
-    @Column(name="experience")
-    private Integer experience;
+    @Column(name="gender",nullable = false, length = 50)
+    private String gender;
 
-    @Column(name = "resume")
-    private String resume;// make the changes as required
-
-    @Column(name="address")
+    @Column(name="address",nullable = false, length = 300)
     private String address;
 
-    @Column(name="description")
+    @Column(name="experience",nullable = false)
+    private Integer experience;
+
+    @Column(name="currentEmploymentStatus",nullable = false, length = 50)
+    private String currentEmploymentStatus;
+
+    @Column(name="currentEmployer", length = 100)
+    private String currentEmployer;
+
+    @Column(name="resume",nullable = false, length = 100)
+    private String resume;
+
+    @Column(name="description",nullable = false, length = 200)
     private String description;
 
     @OneToOne(fetch = FetchType.LAZY)
