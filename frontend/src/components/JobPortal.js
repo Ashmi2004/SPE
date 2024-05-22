@@ -8,7 +8,7 @@ import JobDummyData from './JobDummyData'
 function JobPortal() {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Header/>
       <SearchBar/>
       {JobDummyData.map((job)=>(

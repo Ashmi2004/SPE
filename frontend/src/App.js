@@ -7,6 +7,7 @@ import { Route, Routes, useLocation, Navigate, useNavigate } from 'react-router-
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
 import JobPortal from './components/JobPortal'; 
+import HrPortal from './components/HrPortal';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -39,6 +40,7 @@ function App() {
           <Routes>
             <Route path='login' element={<Login setAuthenticated = {setAuthenticated}/>} />
             <Route path='jobPortal' element={<JobPortal/>}/>
+            <Route path='hrPortal' element={<HrPortal/>}/>
             {/* <Route path='/main' element={<Dashboard />} /> */}
           </Routes>
   </div>
