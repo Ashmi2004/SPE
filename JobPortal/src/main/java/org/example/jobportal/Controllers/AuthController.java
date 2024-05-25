@@ -55,14 +55,14 @@ public class AuthController {
             logger.error("Failed to authenticate user");
             logger.error(response.getMessage());
             logger.info("End of Auth authenticate controller");
-            log.info("ELK says login successful");
+            log.info("ELK says login unsuccessful");
             return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
 
         }else{
             logger.info("successful authentication");
             logger.info(response.getMessage());
             logger.info("End of Auth authenticate controller");
-            log.info("ELK says login unsuccessful");
+            log.info("ELK says login successful");
             return ResponseEntity.ok(response);
         }
     }

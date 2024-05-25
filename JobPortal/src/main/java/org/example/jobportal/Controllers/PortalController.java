@@ -13,11 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 @RequestMapping("/jobBoard")
 public class PortalController {
 
@@ -44,15 +46,19 @@ public class PortalController {
     }
 
     @PostMapping("/postJob")
-    public ResponseEntity<String> postJob(@RequestBody Job jobDetails){
-        Boolean status= hrService.postJobOnPortal(jobDetails);
-        if(status)
+    public ResponseEntity<String> postJob(HttpServletRequest request,@RequestBody Job jobDetails){
+        Boolean status= hrService.postJobOnPortal(request,jobDetails);
+        if(status) {
+            log.info("ELK: Job posted successfully");
             return ResponseEntity.ok("Job Posted Successfully");
+
+        }
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error!");
     }
 
     @GetMapping("/getAllJobs")
     public ResponseEntity<Object> getAllJobs(){
+        log.info("ELK: Get Jobs");
         List<Job> jobs=hrService.getAllJobsList();
         return  ResponseEntity.ok(jobs);
     }

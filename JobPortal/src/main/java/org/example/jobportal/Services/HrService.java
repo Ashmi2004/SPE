@@ -53,8 +53,11 @@ public class HrService {
 
     }
 
-    public Boolean postJobOnPortal(Job jobDetails){
+    public Boolean postJobOnPortal(HttpServletRequest request, Job jobDetails){
         try{
+            logger.info("Inside userConsent service");
+            Integer loginId = jwtService.extractId(request, "loginId");
+            User user = userRepository.findByLoginId(loginId);
             Job job = Job.builder()
                     .jobTitle(jobDetails.getJobTitle())
                     .jobLevel(jobDetails.getJobLevel())
@@ -64,6 +67,7 @@ public class HrService {
                     .company(jobDetails.getCompany())
                     .experience(jobDetails.getExperience())
                     .build();
+            job.setHrDetails(user.getHrDetails());
             jobRepository.save(job);
             return true;
 
@@ -74,6 +78,7 @@ public class HrService {
     }
 
     public List<Job> getAllJobsList(){
+        logger.info("In Get all jobs service");
         return jobRepository.findAll();
 
     }

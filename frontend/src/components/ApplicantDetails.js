@@ -86,9 +86,9 @@ function ApplicantDetails() {
     <div className="bg-white bg-opacity-85 w-2/3 m-10 rounded-3xl">
       <form className="p-10 m-5 block content-center" onSubmit={handleSubmit}> 
         
-          <h2 className="font-serif text-5xl font-bold text-gray-500 text-center m-5">Add Details HR</h2> 
+          <h2 className="font-serif text-5xl font-bold text-gray-500 text-center m-5">Applicant Details</h2> 
 
-          <h3 className="font-serif  text-gray-500 text-2xl italic font-bold text-center">Enter details of HR below: </h3> 
+          <h3 className="font-serif  text-gray-500 text-2xl italic font-bold text-center">Enter your details below: </h3> 
 
           <div className="flex">
             <div className="w-1/2 p-2">
