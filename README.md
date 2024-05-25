@@ -7,7 +7,7 @@ To facilitate the job finding, applying process for users, with enhanced user ex
 
 
 ## Tools: 
-Backend : <img src="https://github.com/Ashmi2004/SPE/assets/54304633/04a79765-1f08-402e-9c2a-213cf4cfa326" width="300" />
+Backend : <img src="https://github.com/Ashmi2004/SPE/assets/54304633/04a79765-1f08-402e-9c2a-213cf4cfa326" width="100" height="100"/>
 Backend : ![image](https://github.com/Ashmi2004/SPE/assets/54304633/04a79765-1f08-402e-9c2a-213cf4cfa326)
           ![image](https://github.com/Ashmi2004/SPE/assets/54304633/5110e3aa-07ce-4419-ab21-f78bc4f578df)
 
