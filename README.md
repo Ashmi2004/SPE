@@ -1,9 +1,53 @@
 # SPE Major Project - Blockchain based Job Application Management App
 
 ## Description
-```
+
 To facilitate the job finding, applying process for users, with enhanced user experience and consent management. For the same, the proposed system offers a portal, a backend server and a blockchain server for smart contracts. 
+Proposed application gives a ReactJs based portal for users, wherein they can see jobs posted, can apply and provide the details to HR. HR can post job, view applicant details, and reach out to them based on the inofrmation provided. 
+Proposed application values user consent and shares applicant data only on receiving consent via blockchain smart contracts. This protects user information and avoids the misuse of data. 
+
+## Installation 
+You can clone the project in your local computer using the following command: 
 ```
+git clone https://github.com/Ashmi2004/SPE.git
+
+```
+This will download the source code, with the follwing structure : 
+<img src="https://github.com/Ashmi2004/SPE/assets/54304633/ed172071-f2db-4b92-a625-8667d4978f61" width="300">
+
+You have the following : 
+1. Blockchain :
+   Clean install this project and run , you can use IntelliJ or Eclipse for the same.
+   or run
+   ``` mvn clean install```
+
+   On successfully running it shows :
+   <img src="https://github.com/Ashmi2004/SPE/assets/54304633/c5a6161c-ab7d-4359-84d6-c293ab0ee171" width="300">
+
+2. ELK :
+   Open this directory in the terminal
+    ``` docker-compose up```
+   On error free running, you can check
+   Elasticsearch by going to http://localhost:9092/
+   Kibana by going to http://localhost:5601/
+   
+3. JobPortal :
+   Clean install this project and run , you can use IntelliJ or Eclipse for the same.
+   or run
+   ``` mvn clean install```
+   On Successfully running :
+   <img src="https://github.com/Ashmi2004/SPE/assets/54304633/41b62d33-54f5-434f-af9c-64d25f5da007" width="300">
+
+4. Frontend :
+   Make sure you have npm installed
+   Go to the folder on terminal or open in VS code and on terminal write
+   To install all the dependencies and node modules
+   ```npm install```
+   To start the front end server
+   ```npm start```
+
+
+
 
 
 ## Tools: 
