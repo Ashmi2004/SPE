@@ -16,10 +16,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
+@Slf4j
 public class AuthController {
     private final AuthService authService;
     private static final Logger logger = LogManager.getLogger(AuthController.class);
@@ -33,11 +35,14 @@ public class AuthController {
             logger.error("Failed to register user");
             logger.error(response.getMessage());
             logger.info("End of Auth register controller");
+            log.info("In elk logging");
             return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
         }else{
             logger.info("successful registration");
             logger.info(response.getMessage());
             logger.info("End of Auth register controller");
+            log.info("Error occured in register api");
+            log.error("There is this error in register api");
             return ResponseEntity.ok(response);
         }
     }
@@ -50,11 +55,14 @@ public class AuthController {
             logger.error("Failed to authenticate user");
             logger.error(response.getMessage());
             logger.info("End of Auth authenticate controller");
+            log.info("ELK says login successful");
             return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+
         }else{
             logger.info("successful authentication");
             logger.info(response.getMessage());
             logger.info("End of Auth authenticate controller");
+            log.info("ELK says login unsuccessful");
             return ResponseEntity.ok(response);
         }
     }

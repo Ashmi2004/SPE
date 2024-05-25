@@ -8,6 +8,8 @@ import Dashboard from './components/Dashboard';
 import Login from './components/Login';
 import JobPortal from './components/JobPortal'; 
 import HrPortal from './components/HrPortal';
+import HRDetails from './components/HRDetails';
+import ApplicantDetails from './components/ApplicantDetails';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -41,7 +43,9 @@ function App() {
             <Route path='login' element={<Login setAuthenticated = {setAuthenticated}/>} />
             <Route path='jobPortal' element={<JobPortal/>}/>
             <Route path='hrPortal' element={<HrPortal/>}/>
-            {/* <Route path='/main' element={<Dashboard />} /> */}
+            <Route path='hrDetails' element={<HRDetails/>}/>
+            <Route path='applicantDetails' element={<ApplicantDetails/>}/>
+            <Route path='main' element={<Dashboard />} />
           </Routes>
   </div>
 

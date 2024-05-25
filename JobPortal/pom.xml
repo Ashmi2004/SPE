@@ -11,6 +11,7 @@
 	<groupId>org.example</groupId>
 	<artifactId>JobPortal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+<!--	<version>1.0.0</version>-->
 	<name>JobPortal</name>
 	<description>JobPortal</description>
 	<properties>
@@ -56,6 +57,11 @@
 			<artifactId>jjwt-impl</artifactId>
 			<version>0.11.5</version>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>

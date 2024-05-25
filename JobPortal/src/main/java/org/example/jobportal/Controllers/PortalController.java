@@ -2,6 +2,7 @@ package org.example.jobportal.Controllers;
 
 
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.example.jobportal.Entities.ApplicantDetails;
 import org.example.jobportal.Services.HrService;
 import org.example.jobportal.Services.UserService;
@@ -26,19 +27,19 @@ public class PortalController {
     @Autowired
     private HrService hrService;
 
-    @PostMapping("/register/user")
-    public ResponseEntity<String> registerUser(@RequestBody ApplicantDetails userDetails){
-        Boolean status= userService.registerUser(userDetails);
+    @PostMapping("/addDetails/user")
+    public ResponseEntity<String> registerUser(HttpServletRequest request, @RequestBody ApplicantDetails userDetails){
+        Boolean status= userService.registerUser(request, userDetails);
         if(status)
-            return ResponseEntity.ok("User Registered Successfully");
+            return ResponseEntity.ok("User details added Successfully");
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error!");
     }
 
-    @PostMapping("/register/hr")
-    public ResponseEntity<String> registerHR(@RequestBody HRDetails hrDetails){
-        Boolean status= hrService.registerHr(hrDetails);
+    @PostMapping("/addDetails/hr")
+    public ResponseEntity<String> registerHR(HttpServletRequest request, @RequestBody HRDetails hrDetails){
+        Boolean status= hrService.registerHr(request, hrDetails);
         if(status)
-            return ResponseEntity.ok("HR Registered Successfully");
+            return ResponseEntity.ok("HR Details added Successfully");
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error!");
     }
 
