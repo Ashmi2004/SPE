@@ -25,7 +25,7 @@ You have the following :
    ```
 
    On successfully running it shows :
-   <img src="https://github.com/Ashmi2004/SPE/assets/54304633/c5a6161c-ab7d-4359-84d6-c293ab0ee171" width="700" height="500" >
+   <img src="https://github.com/Ashmi2004/SPE/assets/54304633/c5a6161c-ab7d-4359-84d6-c293ab0ee171" width="1000" height="500" >
 
 3. ELK :
    Open this directory in the terminal
@@ -45,7 +45,7 @@ You have the following :
 
    ```
    On Successfully running :
-   <img src="https://github.com/Ashmi2004/SPE/assets/54304633/41b62d33-54f5-434f-af9c-64d25f5da007" width="700" height="500">
+   <img src="https://github.com/Ashmi2004/SPE/assets/54304633/41b62d33-54f5-434f-af9c-64d25f5da007" width="1000" height="500">
 
 7. Frontend :
    Make sure you have npm installed
@@ -56,7 +56,8 @@ You have the following :
 
    ```
    To start the front end server
-   ```npm start
+   ```
+   npm start
    ```
 
 
